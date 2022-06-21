@@ -12,6 +12,7 @@
         android:layout_width="@dimen/avatar_size"
         android:layout_height="@dimen/avatar_size"
         android:contentDescription="@string/description_post_author_avatar"
+        android:src="@drawable/ic_netology_48dp"
         app:layout_constraintBottom_toBottomOf="@id/barrierContent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,11 +54,12 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_baseline_more_vert_24dp" />
+        app:srcCompat="@drawable/ic_baseline_more_vert_24dp" />
 
     <TextView
         android:id="@+id/content"
         android:layout_width="match_parent"
+        android:autoLink="web"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_common"
         app:layout_constraintTop_toBottomOf="@+id/barrierContent"
@@ -86,7 +88,7 @@
         android:contentDescription="@string/description_like"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierIcons"
-        tools:srcCompat="@drawable/ic_baseline_favorite_border_24dp" />
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24dp" />
 
     <TextView
         android:id="@+id/likes_amount"
@@ -94,11 +96,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_common"
         android:paddingStart="@dimen/padding_small"
-
-        app:layout_constraintLeft_toRightOf="@id/likes"
+        app:layout_constraintStart_toEndOf="@id/likes"
         app:layout_constraintTop_toBottomOf="@id/barrierIcons"
         tools:ignore="RtlSymmetry"
-        tools:text="@string/like_amount" />
+        android:text="@string/like_amount" />
 
     <ImageView
         android:id="@+id/shares"
@@ -108,10 +109,9 @@
         android:background="@android:color/transparent"
         android:contentDescription="@string/share_amount"
         android:paddingStart="@dimen/padding_small"
-        app:layout_constraintLeft_toRightOf="@id/likes_amount"
+        app:layout_constraintStart_toEndOf="@id/likes_amount"
         app:layout_constraintTop_toBottomOf="@id/barrierIcons"
-        tools:ignore="RtlSymmetry"
-        tools:srcCompat="@drawable/ic_baseline_share_24dp" />
+        app:srcCompat="@drawable/ic_baseline_share_24dp" />
 
     <TextView
         android:id="@+id/shares_amount"
@@ -119,10 +119,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_common"
         android:paddingStart="@dimen/padding_small"
-        app:layout_constraintLeft_toRightOf="@id/shares"
+        app:layout_constraintStart_toEndOf="@id/shares"
         app:layout_constraintTop_toBottomOf="@id/barrierIcons"
         tools:ignore="RtlSymmetry"
-        tools:text="@string/share_amount" />
+        android:text="@string/share_amount" />
 
     <ImageView
         android:id="@+id/views"
@@ -132,7 +132,7 @@
         android:contentDescription="@string/view_amount"
         app:layout_constraintEnd_toStartOf="@+id/views_amount"
         app:layout_constraintTop_toBottomOf="@id/barrierIcons"
-        tools:srcCompat="@drawable/ic_baseline_remove_red_eye_24dp" />
+        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24dp" />
 
     <TextView
         android:id="@+id/views_amount"
@@ -143,6 +143,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierIcons"
         tools:ignore="RtlSymmetry"
-        tools:text="@string/view_amount" />
+        android:text="@string/view_amount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

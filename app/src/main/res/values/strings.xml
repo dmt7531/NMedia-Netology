@@ -4,7 +4,7 @@
     <string name="description_post_author_avatar">Author avatar</string>
     <string name="description_post_menu">Post menu</string>
     <string name="description_like">Like</string>
-    <string name="like_amount" translatable="false">123</string>
-    <string name="share_amount" translatable="false">345</string>
-    <string name="view_amount" translatable="false">545</string>
+    <string name="like_amount" translatable="false">0</string>
+    <string name="share_amount" translatable="false">0</string>
+    <string name="view_amount" translatable="false">0</string>
 </resources>
